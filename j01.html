@@ -1,0 +1,41 @@
+<!--
+@by Angel Francisco Ybarhuen Manrique
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("#citie-all").on("click", function(){
+                    var isCheked = $(this).prop("checked");
+                    var cities = $("[id^=citie-numer-]");
+
+                    if (isCheked) {
+                        cities.attr("checked", true);
+                    } else {
+                        cities.attr("checked", false);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>My cities</legend>
+                <div><label> <strong>All</strong> <input id="citie-all" name="cities-all" type="checkbox" ></label></div>
+                <label>Lima <input id="citie-numer-01" name="cities[]" type="checkbox" value="01"></label>
+                <label>Junin <input id="citie-numer-02" name="cities[]" type="checkbox" value="02"></label>
+                <label>Tarapoto <input id="citie-numer-03" name="cities[]" type="checkbox" value="03"></label>
+                <label>Tarma <input id="citie-numer-04" name="cities[]" type="checkbox" value="04"></label>
+                <label>Huancayo <input id="citie-numer-05" name="cities[]" type="checkbox" value="05"></label>
+                <label>Pisco <input id="citie-numer-06" name="cities[]" type="checkbox" value="06"></label>
+                <div><input type="button" value="Save"/></div>
+            </fieldset>
+        </form>
+        <p>@By : Angel Francisco Ybarhuen Manrique - afym</p>
+    </body>
+</html>
